@@ -34,7 +34,7 @@ import { JwtStrategy } from './auth/passport/jwt.strategy';
     MenuItemsModule,
     MenuItemOptionsModule,
     LikesModule,
-    ConfigModule.forRoot({ isGlobal: true, envFilePath: ['.env.dev','.env.prod'] }),
+    ConfigModule.forRoot({ isGlobal: true}),
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
